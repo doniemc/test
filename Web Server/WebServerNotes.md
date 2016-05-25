@@ -1,4 +1,12 @@
-# How To Set Up Apache Web Server Ubuntu
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Web Server Notes](#web-server-notes)
+	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
+	- [Drupal Setup](#drupal-setup)
+
+<!-- /TOC -->
+
+# Web Server Notes
 
 ## Connect to Server Via SSH
 
@@ -51,9 +59,18 @@ Add new line for the port required under Listen 80:
 Listen 80
 Listen 8080
 ```
+Use the a2ensite tool to enable each of our sites like this:
+```bash
+sudo a2ensite MyNewSite.conf
+```
 
-
+Restart Apache to make these changes take effect:
+```bash
+sudo service apache2 restart
+```
 
 More information is availble here:
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts
+
+##Drupal Setup
