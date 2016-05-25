@@ -1,4 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+#<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Web Server Notes](#web-server-notes)
 	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
@@ -6,6 +6,10 @@
 	- [Drupal Setup](#drupal-setup)
 	- [MySQL Setup](#mysql-setup)
 	- [MySQL Setup (Command Line)](#mysql-setup-command-line)
+	- [Drupal Setup](#drupal-setup)
+	- [Drupal Settings File](#drupal-settings-file)
+
+<!-- /TOC -->
 
 # Web Server Notes
 
@@ -207,11 +211,19 @@ To exit MySQL:
 N.B. MySQL commands end with a semi-colon ;
 ---
 
+## Drupal Setup
+
+In a browser navigate to http://mynewsite
+This will star the Drupal Setup  wizard.
+
+Follow the steps entering details for the database to install site.
+
+---
 ## Drupal Settings File
 
 Each Drupal installation contains a settings.php file. Go to:
 ```bash
-/var www/MyNewSite/sites/default
+/var/www/MyNewSite/sites/default
 ```
 
 Create a settings file by copying the default settings file:
@@ -223,3 +235,23 @@ Edit the settings file:
 ```bash
 sudo nano settings.php
 ```
+
+Scroll down and edit the following block as appropriate:
+```bash
+$databases = array (
+  'default' =>
+  array (
+    'default' =>
+    array (
+      'database' => 'MyNewSite',
+      'username' => 'username',
+      'password' => 'password',
+      'host' => 'localhost',
+     'port' => '3306',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+);
+```
+---
