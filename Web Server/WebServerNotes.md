@@ -21,8 +21,39 @@ Edit New Conf file
 ```bash
 sudo nano NewSiteName.conf
 ```
-<div class="row">
-  <div class="col-sm-4">![alt Sky](https://github.com/doniemc/test/raw/master/images/7X3An.png "Sky")</div>
-  <div class="col-sm-4">.col-sm-4</div>
-  <div class="col-sm-4">.col-sm-4</div>
-</div>
+![alt Sky](assets/WebServerNotes-4437f.png "apache2")
+
+Use the up/down arrows to navigate through the document
+
+Change the DoucmentRoot to point at the root of the website.
+
+*Note the use of forward slashes.*
+
+Exit nano:
+```bash
+Ctrl-x
+```
+
+You will be prompted to save
+
+If you are using a port other than the default Port 80 it will have to be added to the ports.conf file
+
+Navigate to the following folder
+```bash
+cd /etc/apache2
+```
+Edit ports.conf file
+```bash
+sudo nano ports.conf
+```
+Add new line for the port required under Listen 80:
+```bash
+Listen 80
+Listen 8080
+```
+
+
+
+More information is availble here:
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts
