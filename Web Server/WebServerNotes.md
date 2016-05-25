@@ -2,6 +2,7 @@
 
 - [Web Server Notes](#web-server-notes)
 	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
+	- [Install Drush](#install-drush)
 	- [Drupal Setup](#drupal-setup)
 
 <!-- /TOC -->
@@ -73,4 +74,29 @@ More information is availble here:
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts
 
-##Drupal Setup
+## Install Drush
+
+Install Drush:
+
+```bash
+sudo apt-get install Drush
+```
+
+However, the Ubuntu Reporistories may not have the most up to date version of Drush. Use Drush to updgrade itself:
+
+```bash
+sudo drush dl drush --destination='/usr/share'
+```
+
+## Drupal Setup
+
+Navigate to folder where Drupal files are to be stored. Usually /var/www:
+
+```bash
+cd /var/www
+```
+Create a folder to hold the Drupal Site:
+
+```bash
+sudo mkdir MyNewSite
+```
