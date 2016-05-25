@@ -100,3 +100,76 @@ Create a folder to hold the Drupal Site:
 ```bash
 sudo mkdir MyNewSite
 ```
+---
+
+## MySQL Setup
+
+MySQL is installed as part of the LAMP installed
+
+To connect to MySQL we can use MySQL workbench
+
+Use the Connection Method: Standard TCP/IP over SSH
+
+![alt MySQL](assets/WebServerNotes-acd76.png "mysql")
+
+On the Remote Management Tab enter the SSH Hostname (Server IP Address) and SSH Username (or browse to SSH Key File).
+
+![alt MySQL](assets/WebServerNotes-2d68f.png "mysql")
+
+Connect to Server
+
+![alt MySQL](assets/WebServerNotes-bb14e.png "mysql")
+
+
+Click on an existing Schema (Database) and click:
+
+```bash
+Create Schema
+```
+Give the Database a name and click:
+
+```bash
+ Apply
+ ```
+ Next click:
+
+ ```bash
+  Users and Privileges
+ ```
+Select:
+```bash
+ administrator
+```
+
+(If this is a new install the user Administrator will have to be created)
+
+Select:
+```bash
+ Schema Privileges
+```
+
+Select:
+```bash
+ Add Entry
+```
+
+Select:
+```bash
+ Selected schema
+```
+
+From the dropdown choose the required schema (Database)
+
+![alt MySQL](assets/WebServerNotes-7f16e.png "mysql")
+
+Select:
+```bash
+ OK
+```
+On the subsequent Screen click:
+
+Click:
+```bash
+ Select ALL
+ Apply
+```
