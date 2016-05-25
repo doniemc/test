@@ -4,8 +4,8 @@
 	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
 	- [Install Drush](#install-drush)
 	- [Drupal Setup](#drupal-setup)
-
-<!-- /TOC -->
+	- [MySQL Setup](#mysql-setup)
+	- [MySQL Setup (Command Line)](#mysql-setup-command-line)
 
 # Web Server Notes
 
@@ -205,3 +205,21 @@ To exit MySQL:
  exit
 ```
 N.B. MySQL commands end with a semi-colon ;
+---
+
+## Drupal Settings File
+
+Each Drupal installation contains a settings.php file. Go to:
+```bash
+/var www/MyNewSite/sites/default
+```
+
+Create a settings file by copying the default settings file:
+```bash
+sudo cp default.settings.php settings.php
+```
+
+Edit the settings file:
+```bash
+sudo nano settings.php
+```
