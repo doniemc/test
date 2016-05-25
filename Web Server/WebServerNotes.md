@@ -173,3 +173,35 @@ Click:
  Select ALL
  Apply
 ```
+---
+
+## MySQL Setup (Command Line)
+
+SSH on to Server
+
+Type:
+```sql
+ mysql -u username -p -e "CREATE DATABASE databasename CHARACTER SET utf8 COLLATE utf8_general_ci";
+```
+
+Log in to database:
+```sql
+ mysql -u username -p
+```
+
+Create new user if necessary
+```sql
+ CREATE USER username@localhost IDENTIFIED BY 'password';
+```
+
+Give new user rights to the database:
+```sql
+ GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES ON databasename.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+```
+(Do not use commas around username or password)
+
+To exit MySQL:
+```sql
+ exit
+```
+N.B. MySQL commands end with a semi-colon ;
