@@ -5,7 +5,7 @@
 	- [Install Drush](#install-drush)
 	- [Drupal Setup](#drupal-setup)
 	- [MySQL Setup](#mysql-setup)
-	- [MySQL Setup (Command Line)](#mysql-setup-command-line)
+		- [MySQL Setup (Command Line)](#mysql-setup-command-line)
 	- [Drupal Setup](#drupal-setup)
 	- [Drupal Settings File](#drupal-settings-file)
 	- [Linux File Settings](#linux-file-settings)
@@ -13,8 +13,6 @@
 		- [Clear Cache](#clear-cache)
 		- [Install Module](#install-module)
 		- [SQL Dump](#sql-dump)
-
-<!-- /TOC -->
 
 # Web Server Notes
 
@@ -185,7 +183,7 @@ Click:
 
 ---
 
-## MySQL Setup (Command Line)
+### MySQL Setup (Command Line)
 
 SSH on to Server
 
