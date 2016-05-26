@@ -1,15 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Web Server Notes](#web-server-notes)
-	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
-	- [Install Drush](#install-drush)
-	- [Drupal Setup](#drupal-setup)
-	- [MySQL Setup](#mysql-setup)
-	- [MySQL Setup (Command Line)](#mysql-setup-command-line)
-	- [Drupal Setup](#drupal-setup)
-	- [Drupal Settings File](#drupal-settings-file)
-
-<!-- /TOC -->
 
 # Web Server Notes
 
@@ -214,7 +203,7 @@ N.B. MySQL commands end with a semi-colon ;
 ## Drupal Setup
 
 In a browser navigate to http://mynewsite
-This will star the Drupal Setup  wizard.
+This will start the Drupal Setup  wizard.
 
 Follow the steps entering details for the database to install site.
 
@@ -255,3 +244,38 @@ $databases = array (
 );
 ```
 ---
+## Linux File Settings
+
+If moving a site Drupal may give an error message about the files folder not being writable.
+
+To resolve this go to the files folder:
+```bash
+cd /var/www/myNewSite/sites/default
+```
+
+To view the current permissions type:
+```bash
+cd ls -la
+```
+
+To resolve this go to the files folder:
+```bash
+drwxrwx---  12 www-data www-data  4096 May 25 11:02 files
+```
+
+If the permissions do not look like this they can be changed as follows:
+```bash
+sudo chmod -R 770 files
+```
+
+The "-R" flag is "Recursive" i.e. These changes will affect all files and folders withn the files folder.
+
+You may need to change the owner of the files folder to the web server user:
+```bash
+sudo chown -R www-data:www-data files
+```
+
+To see more details on Drupal permissions got to https://www.drupal.org/node/244924
+
+For more on Linux permissions go to
+https://www.linux.com/learn/understanding-linux-file-permissions
