@@ -1,4 +1,20 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Web Server Notes](#web-server-notes)
+	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
+	- [Install Drush](#install-drush)
+	- [Drupal Setup](#drupal-setup)
+	- [MySQL Setup](#mysql-setup)
+	- [MySQL Setup (Command Line)](#mysql-setup-command-line)
+	- [Drupal Setup](#drupal-setup)
+	- [Drupal Settings File](#drupal-settings-file)
+	- [Linux File Settings](#linux-file-settings)
+	- [Drush Commands](#drush-commands)
+		- [Clear Cache](#clear-cache)
+		- [Install Module](#install-module)
+		- [SQL Dump](#sql-dump)
+
+<!-- /TOC -->
 
 # Web Server Notes
 
@@ -166,6 +182,7 @@ Click:
  Select ALL
  Apply
 ```
+
 ---
 
 ## MySQL Setup (Command Line)
@@ -243,6 +260,7 @@ $databases = array (
   ),
 );
 ```
+
 ---
 ## Linux File Settings
 
@@ -279,3 +297,38 @@ To see more details on Drupal permissions got to https://www.drupal.org/node/244
 
 For more on Linux permissions go to
 https://www.linux.com/learn/understanding-linux-file-permissions
+
+---
+## Drush Commands
+The most commonly used Drush commands are:
+
+### Clear Cache
+```bash
+drush cache-clear
+```
+
+or
+
+```bash
+druch cc
+```
+
+You will then be given a list of options e.g. "1" to clear all.
+
+### Install Module
+
+```bash
+drush en module_name -y
+```
+
+### SQL Dump
+
+To dump the database to a self contained database
+
+```bash
+drush sql-dump --result-file=MyNewSite.sql
+```
+
+More information on Drush Commands are here:
+
+https://drushcommands.com/
