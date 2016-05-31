@@ -60,6 +60,18 @@ ls /var/lib/automysqlbackup
 daily  monthly weekly
 ```
 
-
-
 ## MySQL Dump
+
+mysqldump is a command line tool to backup MySQL databases.
+
+To backup the database:
+
+```bash
+mysqldump -u username -p database_to_backup > backup_name.sql
+```
+
+To restore the database:
+
+```bash
+mysql -u username -p database_name < backup_name.sql
+```

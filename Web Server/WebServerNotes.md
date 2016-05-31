@@ -1,18 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Web Server Notes](#web-server-notes)
-	- [Connect to Server Via SSH](#connect-to-server-via-ssh)
-	- [Install Drush](#install-drush)
-	- [Drupal Setup](#drupal-setup)
-	- [MySQL Setup](#mysql-setup)
-		- [MySQL Setup (Command Line)](#mysql-setup-command-line)
-	- [Drupal Setup](#drupal-setup)
-	- [Drupal Settings File](#drupal-settings-file)
-	- [Linux File Settings](#linux-file-settings)
-	- [Drush Commands](#drush-commands)
-		- [Clear Cache](#clear-cache)
-		- [Install Module](#install-module)
-		- [SQL Dump](#sql-dump)
 
 # Web Server Notes
 
@@ -367,3 +353,29 @@ drush sql-dump --result-file=MyNewSite.sql
 More information on Drush Commands are here:
 
 https://drushcommands.com/
+
+## Copying Files from Remote Server to Localhost
+
+### Cygwin
+
+Cygwin is a Unix-like environment and command-line interface for Microsoft Windows. SSH is not natively supported on WIndows (only from 2015 forwards). As such Cygwin needs to be installed to allow for transfer of files via SSH.
+
+Cygwin can be installed from:
+
+https://cygwin.com/install.html
+
+To install OpenSSH find Cygwin’s setup.exe file and run it.
+
+![](assets/WebServerNotes-a43ea.png)
+
+On the package selection screen, search for “open” and look under the “Net” menu.
+
+![](assets/WebServerNotes-293ce.png)
+
+Hit "Next" and go through rest of setup to add package
+
+To transfer files from the remote server to a localhost requires using the SCP utility.
+
+```SCP
+scp -r exs535imwyxr6-master@ssh.eu.platform.sh:~/public/sites/default/files \Server\www\localsite\public\sites\default
+```
