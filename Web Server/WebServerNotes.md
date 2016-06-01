@@ -1,5 +1,3 @@
-
-
 # Web Server Notes
 
 ## Connect to Server Via SSH
@@ -29,6 +27,7 @@ Edit New Conf file
 ```bash
 sudo nano NewSiteName.conf
 ```
+
 ![alt Sky](assets/WebServerNotes-4437f.png "apache2")
 
 Use the up/down arrows to navigate through the document
@@ -374,8 +373,17 @@ On the package selection screen, search for “open” and look under the “Net
 
 Hit "Next" and go through rest of setup to add package
 
-To transfer files from the remote server to a localhost requires using the SCP utility.
+To configure SSH folow the steps outlined here:
+
+http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/
+
+###SCP
+
+To transfer files from the remote server to a localhost requires using the SCP utility. SCP is installed with SSH.
+
+Use the following to copy from a remote server to a localhost:
 
 ```SCP
 scp -r exs535imwyxr6-master@ssh.eu.platform.sh:~/public/sites/default/files \Server\www\localsite\public\sites\default
 ```
+.test   
