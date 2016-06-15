@@ -1,0 +1,11 @@
+<H1>Energy Bills</H1>
+
+The Energy Bills system uses a C# Program to upload the csv files sent by Airtricity.
+
+This is stored on tcc-sharepoint:
+
+```
+\inetpub\wwwroot\EnergyBillsUploader\EnergyBillsUploader\
+```
+
+![alt energybills](assets/EnergyBills-15bfb.png)
