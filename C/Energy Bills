@@ -41,4 +41,8 @@ The Load sheet is generated using the aspx page LoadSheet.aspx and the code behi
 
 This file uses a third-party library for generating Excel files called EPPlus. There is a reference to the .dll file under References.
 
-This file generates the loadsheet per supplier and also th ehidden gl_07 file.
+This file generates the loadsheet per supplier and also the hidden gl_07 file.
+
+<H2>Reports</H2>
+
+The Reports are created in a file called ReportApprovals.aspx and the code behind file ReportApprovals.aspx.cs file. There are two .rdl files in use EnergyBills2.rdlc and EnergyBills3.rdlc
