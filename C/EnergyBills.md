@@ -1,0 +1,48 @@
+
+
+<H1>Energy Bills</H1>
+
+<H2>Load Bills</H2>
+
+The Energy Bills system uses a C# Program to upload the csv files sent by the Supplier.
+
+This is stored on tcc-sharepoint:
+
+```
+\inetpub\wwwroot\EnergyBillsUploader\EnergyBillsUploader\
+```
+Within this project there is a file called LoadBills.aspx.cs (you need to expand the file LoadBills.aspx)
+
+
+This file connects to the Sharepoint List where the Electricity Bills are stored
+and loads the csv file into this list.
+
+The file may need to be edited if the .csv file is not received in the same format every month.
+
+Look for the section called:
+
+```c#
+protected void btnAirtricity_Click(object sender, EventArgs e)
+```
+
+Copy the following section into excel and modify accordingly
+
+![alt energybills](assets/ScreenshotMapping.png)
+
+E.g. if the csv file has 33 columns this text needs to be modified to match the Sharepoint Columns (on the left) with the appropriate csv column (on the right i.e. Array[1], Array[2], etc.)
+
+<H2>Load Sheet</H2>
+
+The Load sheet is generated using the aspx page LoadSheet.aspx and the code behind file LoadSheet.aspx.cs.
+
+This file uses a third-party library for generating Excel files called EPPlus. There is a reference to the .dll file under References.
+
+This file generates the loadsheet per supplier and also the hidden gl_07 file.
+
+<H2>Reports</H2>
+
+The Reports are created in a file called ReportApprovals.aspx and the code behind file ReportApprovals.aspx.cs file. There are two .rdl files in use EnergyBills2.rdlc and EnergyBills3.rdlc
+
+
+<H2>SPMetal</H2>
+SP Metal is a command-line tool included with Sharepoint to generate classes based on the lists / libraries in a site. This class is then used in a C# project. In this instance the file EnergyBillsLinq.cs is the class file containing the getters from Sharepoint. this file is not dynamically update i.e. if changes are made to the structure of a list the SPMetal tool needs to be run again to reflect these changes.
