@@ -1,0 +1,13 @@
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.csprojAssemblyReference.cache
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.csproj.CoreCompileInputs.cache
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.AssemblyInfoInputs.cache
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.AssemblyInfo.cs
+C:\Users\donalmcweeney\Code\NewTest\bin\Debug\netcoreapp3.1\NewTest.exe
+C:\Users\donalmcweeney\Code\NewTest\bin\Debug\netcoreapp3.1\NewTest.deps.json
+C:\Users\donalmcweeney\Code\NewTest\bin\Debug\netcoreapp3.1\NewTest.runtimeconfig.json
+C:\Users\donalmcweeney\Code\NewTest\bin\Debug\netcoreapp3.1\NewTest.runtimeconfig.dev.json
+C:\Users\donalmcweeney\Code\NewTest\bin\Debug\netcoreapp3.1\NewTest.dll
+C:\Users\donalmcweeney\Code\NewTest\bin\Debug\netcoreapp3.1\NewTest.pdb
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.dll
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.pdb
+C:\Users\donalmcweeney\Code\NewTest\obj\Debug\netcoreapp3.1\NewTest.genruntimeconfig.cache

@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\donalmcweeney\\Code\\NewTest\\NewTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\donalmcweeney\\Code\\NewTest\\NewTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\donalmcweeney\\Code\\NewTest\\NewTest.csproj",
+        "projectName": "NewTest",
+        "projectPath": "C:\\Users\\donalmcweeney\\Code\\NewTest\\NewTest.csproj",
+        "packagesPath": "C:\\Users\\donalmcweeney\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\donalmcweeney\\Code\\NewTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\donalmcweeney\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\donalmcweeney\\AppData\\Local\\Microsoft\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
